@@ -10,10 +10,10 @@ export class AppComponent {
   heroes: Hero[] = [];
 
   onAddHeroClick() {
-    const hero = <Hero>{
+    const hero = {
       name: 'Sam',
       state: 'active'
-    };
+    } as Hero;
     this.heroes.push(hero);
   }
 }
