@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Hero } from './models/hero';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  heroes: Hero[] = [];
+
+  onAddHeroClick() {
+    const hero = new Hero();
+    hero.name = 'Sam';
+    hero.state = 'active';
+    this.heroes.push(hero);
+  }
 }

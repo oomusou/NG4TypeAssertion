@@ -1,3 +1,6 @@
-<h1>
-  {{title}}
-</h1>
+<button (click)="onAddHeroClick()">Add Hero</button>
+<ul>
+  <li *ngFor="let hero of heroes">
+    {{ hero.name }} | {{ hero.state}}
+  </li>
+</ul>
