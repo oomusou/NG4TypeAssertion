@@ -10,7 +10,7 @@ export class AppComponent {
   heroes: Hero[] = [];
 
   onAddHeroClick() {
-    const hero: Hero = {
+    const hero = <Hero>{
       name: 'Sam',
       state: 'active'
     };
